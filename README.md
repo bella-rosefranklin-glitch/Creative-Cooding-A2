@@ -58,80 +58,9 @@ Earn Points: Move forward and reach new positions to increase your score.
 Avoid Animals: Animals move across the screen in random directions. Colliding with one causes you to lose a life.
 Survive: Players have three lives. Once all three are lost, the game ends.
 
-`def on_up_pressed():
-    global highest_y
-    if jumping == False:
-        mySprite.y -= 20
-        if mySprite.y < highest_y:
-            highest_y = mySprite.y
-            info.change_score_by(1)
-controller.up.on_event(ControllerButtonEvent.PRESSED, on_up_pressed)
-
-def on_a_pressed():
-    global jumping, highest_y
-    if jumping == False:
-        jumping = True
-        mySprite.y -= 20
-        if mySprite.y < highest_y:
-            highest_y = mySprite.y
-            info.change_score_by(1)
-        pause(200)
-        jumping = False
-controller.A.on_event(ControllerButtonEvent.PRESSED, on_a_pressed)
-
-def on_left_pressed():
-    if mySprite.x > 15:
-        mySprite.x -= 10
-controller.left.on_event(ControllerButtonEvent.PRESSED, on_left_pressed)
-
-def on_right_pressed():
-    if mySprite.x < 145:
-        mySprite.x += 10
-controller.right.on_event(ControllerButtonEvent.PRESSED, on_right_pressed)
-
-def on_down_pressed():
-    if jumping == False and mySprite.y < 110:
-        mySprite.y += 20
-controller.down.on_event(ControllerButtonEvent.PRESSED, on_down_pressed)
-
-def on_on_overlap(player_sprite, obstacle):
-    if jumping == False:
-        info.change_life_by(-1)
-        obstacle.destroy(effects.fire, 200)
-        mySprite.x = 80
-sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, on_on_overlap)
-
-def on_life_zero():
-    game.over(False, effects.dissolve)
-info.on_life_zero(on_life_zero)
-
-direction = 0
-animal: Sprite = None
-jumping = False
-highest_y = 0
-mySprite: Sprite = None
-game_speed = 35
-highest_y = 110
 
     SpriteKind.player)
-mySprite.x = 80
-mySprite.y = 110
-mySprite.z = 10
-scene.camera_follow_sprite(mySprite)
-game.splash("SAVANNAH DASH", "Crossy Road Adventure!")
-game.show_long_text("Use arrow keys to move. Press A to jump. Avoid moving animals. Keep going to increase your score!",
-    DialogLayout.CENTER)
 
-def on_update_interval():
-    global game_speed
-    if game_speed < 90:
-        game_speed += 5
-game.on_update_interval(6000, on_update_interval)
-
-def on_update_interval2():
-    global animal, direction
-    animal = sprites.create(img("""
-           
         SpriteKind.enemy)
     # Animals appear ahead of the player
     animal.y = mySprite.y - randint(30, 100)
@@ -143,15 +72,7 @@ def on_update_interval2():
         animal.x = 170
         animal.vx = 0 - game_speed
     animal.z = 5
-game.on_update_interval(900, on_update_interval2)
 
-def on_update_interval3():
-    for obstacle2 in sprites.all_of_kind(SpriteKind.enemy):
-        if obstacle2.y > mySprite.y + 150:
-            obstacle2.destroy()
-        if obstacle2.x < -30 or obstacle2.x > 190:
-            obstacle2.destroy()
-game.on_update_interval(500, on_update_interval3)
 `
 
 
@@ -169,7 +90,7 @@ To do:
 
 
 ## Acknowledgements
-Give credit here.
+
 - This project was inspired by Crossy Road
 - This project was based on Crossy Road
 - Many thanks to my Tutor and friends in class
