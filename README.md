@@ -55,7 +55,7 @@ Switch the editor to Python.
 Savannah Dash can be played through the MakeCode Arcade simulator.
 Arrow Keys: Move the character up, down, left and right.
 Earn Points: Move forward and reach new positions to increase your score.
-Avoid Animals: Animals move across the screen in random directions. Colliding with one while not jumping causes you to lose a life.
+Avoid Animals: Animals move across the screen in random directions. Colliding with one causes you to lose a life.
 Survive: Players have three lives. Once all three are lost, the game ends.
 
 `def on_up_pressed():
