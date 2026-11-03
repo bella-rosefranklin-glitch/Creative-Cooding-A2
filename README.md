@@ -44,7 +44,7 @@ Collision Detection: The game detects when the player touches an animal and trig
 
 
 ## Setup
-WhPython in MakeCode Arcade, a free online game development platform.
+Python in MakeCode Arcade
 My project did not require any additional software installations or external Python libraries. 
 Open MakeCode Arcade.
 Click New Project to create a game.
