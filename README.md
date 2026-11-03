@@ -19,7 +19,7 @@ My game is inspired by Crossy Road, where players have to navigate through a Sav
 
 
 ## General Information
-I created a game called Savannah Dash using Python in MakeCode Arcade. Players control a bunny character moving through a savannah environment while avoiding lions. The purpose of my project was to create a fun and interactive game while developing my coding skills. Although my project doesn't solve a specific problem, it focuses on creating an engaging gaming experience. I chose to create Savannah Dash because I like Crossy Road and wanted to develop my own version with a different theme. This project allowed me to experiment with Python coding concepts such as functions and variables while improving my problem-solving and debugging skills.
+I created a game called Savannah Dash using Python in MakeCode Arcade. Players control a bunny character moving through a savannah environment while avoiding lions. The purpose of my project was to create a fun and interactive game while developing my coding skills. Although my project doesn't solve a specific problem, it focuses on creating an engaging gaming experience. I chose to create Savannah Dash because I like Crossy Road and wanted to develop my own version with a different theme.
 
 
 ## Technologies Used
